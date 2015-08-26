@@ -1,3 +1,4 @@
 backup/*
 .netrwhist
 bundle/*
+startup/personal.vim
