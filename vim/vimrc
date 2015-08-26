@@ -62,22 +62,22 @@ set autochdir
 
 " Load other setting scripts
 " Manage plugins ***************************************************************
-source ./startup/vundle.vim
+runtime startup/vundle.vim
 
 " Set the appearance ***********************************************************
-source ./startup/appearence.vim
+runtime startup/appearence.vim
 
 " Set the Keybindings **********************************************************
-source ./startup/mappings.vim
+runtime startup/mappings.vim
 
 " Plugin configs related to coding. ********************************************
-source ./startup/coding.vim
+runtime startup/coding.vim
 
 " Snippets to save some typing *************************************************
-source ./startup/snippets.vim
+runtime startup/snippets.vim
 
 " Scripts used to do awesome things. *******************************************
-source ./startup/scripts.vim
+runtime startup/scripts.vim
 
 " Personal stuff that should not be put into the repo. *************************
-source ./startup/personal.vim
+runtime startup/personal.vim
