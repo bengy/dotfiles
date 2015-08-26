@@ -1,6 +1,8 @@
 # Load antigen as plugin manager.
 source $HOME/.zsh/antigen.zsh
 
+antigen use oh-my-zsh
+
 # Git support.
 antigen bundle git
 
@@ -10,7 +12,7 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme
-antigen theme jeremyFreeAgent/oh-my-zsh-powerline-theme powerline
+antigen theme agnoster
 
 # Tell the plugin manager we are done.
 antigen apply
