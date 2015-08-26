@@ -21,3 +21,14 @@ fi
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Creating syslink from $HOME/.vim to $DIR/.vim"
 ln $DIR/vim $HOME/.vim 
+
+## Install zsh config.
+# Copy the personal template.
+file="./zsh/personal.zsh"
+if [ -f "$file" ]
+then
+	echo "A personal zsh file already exists. Not copying template"
+else
+	cp ./zsh/personal.zsh.template ./zsh/personal.vim
+	echo "Copyied personal zsh template"
+fi

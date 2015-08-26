@@ -1,0 +1,41 @@
+# Become famous. Write history.
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=5000
+# No need to type cd.
+setopt autocd
+# Search files with globs.
+setopt extglob
+bindkey -e
+
+export TERMINAL
+
+# Load useful functions.
+source ./helper_functions.zsh
+
+# Aliases to save some time.
+source ./alias.zsh
+
+# Per machine configuration.
+source ./personal.zsh
+
+# Load all exports
+source ./exports.zsh
+
+# Load autocompletion stuff.
+source ./completion.zsh
+
+autoload -U promptinit
+promptinit
+prompt redhat
+DEFAULT_USER=benjamin
+
+# Load plugins.
+source ./plugins.zsh
+
+# Use vim edit mode.
+bindkey -v
+# Set keytimeout to 0.1s for faster switching between insert/command mode.
+export KEYTIMEOUT=1
+# Set up reverse search in vi mode.
+bindkey '^R' history-incremental-search-backward
