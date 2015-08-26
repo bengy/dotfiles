@@ -23,7 +23,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ./vim/bundle/Vundle.vim
 # Create a syslink to the .vim folder in the home directory.
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Creating syslink from $HOME/.vim to $DIR/.vim"
-ln -s $DIR/vim $HOME/.vim 
+ln -s $DIR/vim $HOME/.vim
 
 # Install all plugins.
 vim +PluginInstall +qall
@@ -35,6 +35,14 @@ if [ -f "$file" ]
 then
 	echo "A personal zsh file already exists. Not copying template"
 else
-	cp ./zsh/personal.zsh.template ./zsh/personal.vim
+	cp ./zsh/personal.zsh.template ./zsh/personal.zsh
 	echo "Copyied personal zsh template"
 fi
+
+# Syslink .zshrc file to home directory.
+echo "Creating syslink from $HOME/.zshrc to $DIR/zsh/zshrc"
+ln -s $DIR/zsh/zshrc $HOME/.zshrc
+echo "Creating syslink from $HOME/.zsh to $DIR/zsh/"
+ln -s $DIR/zsh $HOME/.zsh
+
+

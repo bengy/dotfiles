@@ -5,33 +5,34 @@ SAVEHIST=5000
 # No need to type cd.
 setopt autocd
 # Search files with globs.
-setopt extglob
+setopt extendedglob
 bindkey -e
 
 export TERMINAL
 
 # Load useful functions.
-source ./helper_functions.zsh
+source $HOME/.zsh/helper_functions.zsh
 
 # Aliases to save some time.
-source ./alias.zsh
+source $HOME/.zsh/alias.zsh
 
 # Per machine configuration.
-source ./personal.zsh
+source $HOME/.zsh/personal.zsh
 
 # Load all exports
-source ./exports.zsh
+source $HOME/.zsh/exports.zsh
 
 # Load autocompletion stuff.
-source ./completion.zsh
+source $HOME/.zsh/completion.zsh
+
+# Load plugins.
+source $HOME/.zsh/plugins.zsh
 
 autoload -U promptinit
 promptinit
 prompt redhat
 DEFAULT_USER=benjamin
 
-# Load plugins.
-source ./plugins.zsh
 
 # Use vim edit mode.
 bindkey -v
