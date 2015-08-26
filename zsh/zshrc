@@ -25,13 +25,14 @@ source $HOME/.zsh/exports.zsh
 # Load autocompletion stuff.
 source $HOME/.zsh/completion.zsh
 
-# Load plugins.
-source $HOME/.zsh/plugins.zsh
-
 autoload -U promptinit
 promptinit
 prompt redhat
 DEFAULT_USER=benjamin
+
+# Load plugins.
+source $HOME/.zsh/plugins.zsh
+
 
 
 # Use vim edit mode.

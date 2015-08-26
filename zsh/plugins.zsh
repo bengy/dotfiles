@@ -10,7 +10,7 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme
-antigen theme agnoster
+antigen theme jeremyFreeAgent/oh-my-zsh-powerline-theme powerline
 
 # Tell the plugin manager we are done.
 antigen apply
