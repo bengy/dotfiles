@@ -17,10 +17,16 @@ else
 	echo "Copyied personal vim template"
 fi
 
+# Install vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ./vim/bundle/Vundle.vim
+
 # Create a syslink to the .vim folder in the home directory.
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Creating syslink from $HOME/.vim to $DIR/.vim"
-ln $DIR/vim $HOME/.vim 
+ln -s $DIR/vim $HOME/.vim 
+
+# Install all plugins.
+vim +PluginInstall +qall
 
 ## Install zsh config.
 # Copy the personal template.
