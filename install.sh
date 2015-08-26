@@ -20,4 +20,4 @@ fi
 # Create a syslink to the .vim folder in the home directory.
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Creating syslink from $HOME/.vim to $DIR/.vim"
-ln $HOME/.vim $DIR/.vim
+ln $DIR/.vim $HOME/.vim 
