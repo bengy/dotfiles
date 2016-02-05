@@ -1,18 +1,23 @@
 # ███████╗███████╗██╗  ██╗██████╗  ██████╗
 # ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║     
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║     
+#   ███╔╝ ███████╗███████║██████╔╝██║
+#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║
 # ███████╗███████║██║  ██║██║  ██║╚██████╗
 # ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
 #
 # Author:  Benjamin
 # License: WTFPL
 
-# Set the directory for the scripts to use.
-DIR=$ZDOTDIR/zshrc_scripts
+## Become famous. Write history.
 
-# Load the config files.
-for zshconfig ($DIR/*.zsh) source $zshconfig
+# Destination of the history file.
+HISTFILE=$ZDOTDIR/.history
 
-# Last think to be loaded is syntax highlighting for zsh.
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# History to keep in RAM.
+HISTSIZE=10000
+
+# History to save to file.
+SAVEHIST=5000
+
+# Append history to file instead of overwriting.
+setopt appendhistory

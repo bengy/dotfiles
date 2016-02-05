@@ -1,18 +1,15 @@
 # ███████╗███████╗██╗  ██╗██████╗  ██████╗
 # ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║     
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║     
+#   ███╔╝ ███████╗███████║██████╔╝██║
+#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║
 # ███████╗███████║██║  ██║██║  ██║╚██████╗
 # ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
 #
 # Author:  Benjamin
 # License: WTFPL
 
-# Set the directory for the scripts to use.
-DIR=$ZDOTDIR/zshrc_scripts
+## Add shortcuts and commands here that only apply
+## to the current machine (not pushing to repo).
 
-# Load the config files.
-for zshconfig ($DIR/*.zsh) source $zshconfig
-
-# Last think to be loaded is syntax highlighting for zsh.
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Set the editor to use for editing all kinds of files.
+export EDITOR="vi"
