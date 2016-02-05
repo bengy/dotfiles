@@ -1,0 +1,25 @@
+#  █████╗ ██████╗ ██████╗ ███████╗
+# ██╔══██╗██╔══██╗██╔══██╗██╔════╝
+# ███████║██████╔╝██████╔╝███████╗
+# ██╔══██║██╔═══╝ ██╔═══╝ ╚════██║
+# ██║  ██║██║     ██║     ███████║
+# ╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝
+#
+## A list of software that I need to install.
+
+# Bash replacement
+zsh
+
+# Font
+powerline-fonts-git
+
+# Terminal emulator
+urxvt
+urxvt-resize-font
+perl-clipboard
+
+# X resource manager
+xorg-xrdb
+
+# Editor
+neovim
