@@ -1,0 +1,19 @@
+# ██╗  ██╗██╗███╗   ██╗██╗████████╗██████╗  ██████╗
+# ╚██╗██╔╝██║████╗  ██║██║╚══██╔══╝██╔══██╗██╔════╝
+#  ╚███╔╝ ██║██╔██╗ ██║██║   ██║   ██████╔╝██║     
+#  ██╔██╗ ██║██║╚██╗██║██║   ██║   ██╔══██╗██║     
+# ██╔╝ ██╗██║██║ ╚████║██║   ██║   ██║  ██║╚██████╗
+# ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝
+#
+# Author:  Benjamin Rau
+# License: WTFPL
+
+# Load the xresource file via xrdb.
+DIR=$(dirname $(realpath $0))
+xrdb $DIR/xresources
+
+# Start urxvtd in server/client mode.
+urxvtd -q -f -o
+
+# Start the i3 wm.
+exec i3
