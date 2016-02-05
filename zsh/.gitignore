@@ -1,2 +1,4 @@
-personal.zsh
-zsh
+.history
+.zcompdump*
+.zlogin
+.zshrc

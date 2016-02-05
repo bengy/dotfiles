@@ -1,18 +1,20 @@
 # ███████╗███████╗██╗  ██╗██████╗  ██████╗
 # ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║     
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║     
+#   ███╔╝ ███████╗███████║██████╔╝██║
+#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║
 # ███████╗███████║██║  ██║██║  ██║╚██████╗
 # ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
 #
 # Author:  Benjamin
 # License: WTFPL
 
-# Set the directory for the scripts to use.
-DIR=$ZDOTDIR/zshrc_scripts
+## Setting different zsh options.
 
-# Load the config files.
-for zshconfig ($DIR/*.zsh) source $zshconfig
+# No need to type cd.
+setopt autocd
 
-# Last think to be loaded is syntax highlighting for zsh.
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Use extended globbing (like recursive globbing, negation, ...).
+setopt extendedglob 
+
+# This is not R2D2.
+unsetopt beep

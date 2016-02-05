@@ -1,18 +1,20 @@
 # ███████╗███████╗██╗  ██╗██████╗  ██████╗
 # ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║     
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║     
+#   ███╔╝ ███████╗███████║██████╔╝██║
+#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║
 # ███████╗███████║██║  ██║██║  ██║╚██████╗
 # ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
 #
 # Author:  Benjamin
 # License: WTFPL
 
-# Set the directory for the scripts to use.
-DIR=$ZDOTDIR/zshrc_scripts
+## Autocompletion - let zsh do all the thinking.
 
-# Load the config files.
-for zshconfig ($DIR/*.zsh) source $zshconfig
+#os The following lines were added by compinstall
 
-# Last think to be loaded is syntax highlighting for zsh.
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zstyle ':completion:*' completer _expand _complete _ignored
+zstyle :compinstall filename '$HOME/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
