@@ -16,5 +16,10 @@ DIR=$(dirname $(realpath $0))
 source $DIR/helpers.sh
 
 # Execute the install scripts.
-for install_script ($DOTFILE_DIR/**/install_*.sh) source $install_script
+for SCRIPT ($DOTFILE_DIR/**/install_*.sh) {
+	CONFIG_NAME=$(basename $(dirname $SCRIPT))
+	if ask "Do you want to install config files for $CONFIG_NAME?" N; then
+		source $SCRIPT
+	fi
+}
 
