@@ -1,0 +1,2 @@
+## Fn+F2.
+To get the Wifi toggle key to work, add acpi_osi="!Windows 2012" as a kernel parameter.

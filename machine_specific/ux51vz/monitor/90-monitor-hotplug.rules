@@ -1,0 +1,2 @@
+# Execute this when an external monitor is plugged in.
+ACTION=="change", KERNEL=="card0", SUBSYSTEM=="drm", RUN+="/usr/bin/systemctl --no-block start monitor-hotplug.service"
