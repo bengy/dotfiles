@@ -12,6 +12,9 @@
 DIR=$(dirname $(realpath $0))
 xrdb $DIR/xresources
 
+# Start the udiskie automounter.
+udiskie --no-notify --tray --use-udisks2
+
 # Start urxvtd in server/client mode.
 urxvtd -q -f -o
 
