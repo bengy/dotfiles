@@ -1,0 +1,2 @@
+### Getting Fn+F2 working
+Add acpi_osi="!Windows 2012" as a kernel parameter.

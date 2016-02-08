@@ -1,0 +1,11 @@
+[Unit]
+Description=Toggle external monitor when plugged in/out.
+
+[Service]
+Type=simple
+RemainAfterExit=no
+User=benjamin
+ExecStart=/usr/local/bin/monitor-hotplug.sh
+
+[Install]
+WantedBy=multi-user.target
