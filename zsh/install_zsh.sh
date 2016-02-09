@@ -24,7 +24,7 @@ fi
 
 # Link the zshenv file to the home directory. No other files
 # needed to be linked because ZDOTDIR is set to this directory.
-create_link $DOTFILE_DIR/x/xinitrc $HOME/.xinitrc
+create_link $DOTFILE_DIR/zsh/zshenv $HOME/.zshenv
 
 # Instead of putting more files in the home directory, we are linking
 # them in this folder.
