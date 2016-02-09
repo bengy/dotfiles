@@ -24,25 +24,25 @@ urxvt*perl-ext-common: font-size,clipboard,url-select
 urxvt*scrollBar_right: true
 
 ! Enable Ctr+Shift.
-urxvt*iso14755: 	false
-urxvt*iso14755_52: 	false
+urxvt*iso14755:		false
+urxvt*iso14755_52:	false
 
 ! Clipboard support.
-urxvt*keysym.S-C-C: 		perl:clipboard:copy
-urxvt*keysym.S-C-V: 		perl:clipboard:paste
-urxvt*clipboard.copycmd: 	xsel -ib
-urxvt*clipboard.pastecmd: 	xsel -ob
+urxvt*keysym.S-C-C:			perl:clipboard:copy
+urxvt*keysym.S-C-V:			perl:clipboard:paste
+urxvt*clipboard.copycmd:	xsel -ib
+urxvt*clipboard.pastecmd:	xsel -ob
 
 ! Selectable URLs.
-urxvt*keysym.M-u: 			perl:url-select:select_next
-urxvt*url-select.launcher: 	/usr/bin/xdg-open
-urxvt*url-select.underline: true
+urxvt*keysym.M-u:			perl:url-select:select_next
+urxvt*url-select.launcher:	/usr/bin/xdg-open
+urxvt*url-select.underline:	true
 
 ! Resize font size on +/- and keypad add/substract.
-urxvt*keysym.C-KP_Add: 		perl:font-size:increase
+urxvt*keysym.C-KP_Add:		perl:font-size:increase
 urxvt*keysym.C-KP_Subtract: perl:font-size:decrease
-urxvt*keysym.C-plus: 		perl:font-size:increase
-urxvt*keysym.C-minus: 		perl:font-size:decrease
+urxvt*keysym.C-plus:		perl:font-size:increase
+urxvt*keysym.C-minus:		perl:font-size:decrease
 
 ! Save number lines in the scrollback buffer.
 urxvt*saveLines: 5000
@@ -83,29 +83,29 @@ urxvt*colorUL: S_blue
 ! To only apply colors to your terminal, for example, prefix
 ! the color assignment statement with its name. Example:
 !
-! URxvt*background:            S_base03
+! URxvt*background:			S_base03
 
-urxvt*background:      	  S_base03        
-*foreground:              S_base0
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
+urxvt*background:			S_base03
+*foreground:				S_base0
+*fading:					40
+*fadeColor:					S_base03
+*cursorColor:				S_base1
+*pointerColorBackground:	S_base01
+*pointerColorForeground:	S_base1
 
-urxvt*color0:                  S_base02
-urxvt*color1:                  S_red
-urxvt*color2:                  S_green
-urxvt*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+urxvt*color0:				S_base02
+urxvt*color1:				S_red
+urxvt*color2:				S_green
+urxvt*color3:				S_yellow
+*color4:					S_blue
+*color5:					S_magenta
+*color6:					S_cyan
+*color7:					S_base2
+*color9:					S_orange
+*color8:					S_base03
+*color10:					S_base01
+*color11:					S_base00
+*color12:					S_base0
+*color13:					S_violet
+*color14:					S_base1
+*color15:					S_base3
