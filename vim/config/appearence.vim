@@ -64,3 +64,6 @@ set list listchars=tab:→\ ,trail:·
 " Define how they should look like (gray with no special background).
 :hi SpecialKey ctermbg=8 ctermfg=59 cterm=NONE
 
+" Start NERDTree if vim starts up with no specified files.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
