@@ -17,7 +17,6 @@ alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --colo
 
 # Open things with their default app.
 alias open='xdg-open'
-alias o='xdg-open'
 
 # Show disk usage.
 alias df='df -h'
@@ -30,3 +29,8 @@ alias pdfcompile='latexmk -pdf -pvc --silent '
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias back='cd $OLDPWD'
+
+# Very short aliases for most used commands.
+alias n="neovim"
+alias t="tmux"
+alias o='xdg-open'
