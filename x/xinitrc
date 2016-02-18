@@ -19,5 +19,11 @@ urxvtd -q -f -o
 # Start the udiskie automounter.
 udiskie --no-notify --tray --use-udisks2 &
 
+# Use xcape to remap if available.
+if hash xcape 2>/dev/null; then
+	setxkbmap -option 'caps:ctrl_modifier'
+	xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+fi
+
 # Start the i3 wm.
 exec i3
