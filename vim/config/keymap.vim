@@ -33,3 +33,12 @@ nmap { {zz
 
 " Show undo history.
 nmap <silent> <leader>u :GundoToggle<CR>
+
+" Open Nerd Tree.
+map <leader>n :NERDTreeToggle<CR>
+
+" Open Fuzzy file finder in file mode.
+nmap <leader>t :CtrlP<CR>
+
+" Open Fuzzy file finder in buffer mode.
+nmap <leader>b :CtrlPBuffer<CR>

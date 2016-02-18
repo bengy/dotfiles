@@ -45,9 +45,11 @@ Plugin 'vim-airline/vim-airline'
 " And themes for it.
 Plugin 'vim-airline/vim-airline-themes'
 
-" Commant-t: Fuzzy search for openening files super fast.
-" Sadly not available in neovim yet.
-" Plugin 'wincent/command-t'
+" NERD Tree as a file drawer (move and delete files, look at dirs).
+Plugin 'scrooloose/nerdtree'
+
+" CtrlP: Fuzzy search for openening files super fast.
+Plugin 'kien/ctrlp.vim'
 
 " Nice undo history.
 Plugin 'sjl/gundo.vim'
