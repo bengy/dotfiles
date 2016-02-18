@@ -45,10 +45,10 @@ urxvt*keysym.C-plus:		perl:font-size:increase
 urxvt*keysym.C-minus:		perl:font-size:decrease
 
 ! Save number lines in the scrollback buffer.
-urxvt*saveLines: 5000
+urxvt*saveLines: 10000
 
 ! 8-bit-clean access (making the alt-key work).
-! urxvt*insecure: true
+urxvt*insecure: true
 
 ! Solarized color scheme for the X Window System
 !
