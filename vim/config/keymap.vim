@@ -18,6 +18,8 @@ let g:mapleader = ","
 
 " Quickly edit the vimrc file.
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
+let config_path = expand('<sfile>:p:h')
+nmap <silent> <leader>evc :execute 'edit' config_path<CR>
 " Live reload the vimrc file.
 nmap <silent> <leader>rv :so $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -53,3 +55,11 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <M-p> :TmuxNavigatePrevious<cr>
 " Autosave on switching panes.
 let g:tmux_navigator_save_on_switch = 1
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+" Add new snippets on the fly.
+nnoremap <leader>s :UltiSnipsEdit<cr>

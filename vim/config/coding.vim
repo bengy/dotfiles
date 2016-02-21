@@ -30,3 +30,6 @@ set shiftwidth=4
 " Copy indent style from line we are starting the new line from. Useful to
 " copy filetype style if we have no filetype indentation options set.
 set autoindent
+
+" When editing the snippets file for ultisnips open up a spit window.
+let g:UltiSnipsEditSplit="vertical"
