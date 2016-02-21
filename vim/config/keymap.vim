@@ -42,3 +42,14 @@ nmap <leader>t :CtrlP<CR>
 
 " Open Fuzzy file finder in buffer mode.
 nmap <leader>b :CtrlPBuffer<CR>
+
+" Use switch between window panes with alt+h/j/k/l.
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <M-p> :TmuxNavigatePrevious<cr>
+" Autosave on switching panes.
+let g:tmux_navigator_save_on_switch = 1

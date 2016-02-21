@@ -26,3 +26,5 @@ alias marvinproxy='ssh raubn@marvin.informatik.uni-stuttgart.de -D 8081'
 
 # Enable prime gpu offloading.
 alias offload='xrandr --setprovideroffloadsink nouveau Intel'
+
+alias dance='cd $HOME/projects/dance'

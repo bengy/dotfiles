@@ -72,6 +72,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Syntax checker. Integrates nicley with YCM and vim-airline.
 Plugin 'scrooloose/syntastic'
 
+" Tmux navigation (between switching splits inside vim and inside tmux).
+Plugin 'christoomey/vim-tmux-navigator'
+
 " Syntax definitions:
 "Plugin 'tpope/vim-git'									" Git files.
 "Plugin 'pangloss/vim-javascript'						" Javascript I
