@@ -23,10 +23,13 @@ let g:airline_powerline_fonts = 1
 " Set the theme to match our color theme.
 let g:airline_theme='solarized'
 
-" Highlight red if a line goes beyond the 80 characters.
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" Match every character in column greater or equal 81 as overlength.
-match OverLength /\%81v.\+/
+
+augroup vimrc_autocmds
+	" Highlight red if a line goes beyond the 80 characters.
+	autocmd BufEnter * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+	" Match every character in column greater or equal 81 as overlength.
+	autocmd BufEnter * match OverLength /\%81v.*/
+augroup END
 
 " Highlight trailing whitespaces in an orange color.
 highlight TrailingWhitespaces ctermbg=red ctermfg=white guibg=#ffa500

@@ -75,10 +75,17 @@ Plugin 'scrooloose/syntastic'
 " Tmux navigation (between switching splits inside vim and inside tmux).
 Plugin 'christoomey/vim-tmux-navigator'
 
-" Syntax definitions:
+" Change the surroundings.
+Plugin 'tpope/vim-surround'
+
+" Autoformatting. Uses native formatters.
+Plugin 'Chiel92/vim-autoformat'
+
+" Language support/enhancement.
+Plugin 'jelera/vim-javascript-syntax'					" Javascript.
+
 "Plugin 'tpope/vim-git'									" Git files.
 "Plugin 'pangloss/vim-javascript'						" Javascript I
-"Plugin '1995eaton/vim-better-javascript-completion'	" Javascript II
 "Plugin 'othree/javascript-libraries-syntax.vim'		" Syntax for JS Libraries (incl. Angular)
 "Plugin 'moll/vim-node'									" Node.js
 "Plugin 'othree/html5.vim'								" HTML
