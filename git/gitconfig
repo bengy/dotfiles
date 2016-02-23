@@ -10,3 +10,5 @@
 [user]
 	email = benngiro@gmail.com
 	name = Benjamin Rau
+[push]
+	default = simple

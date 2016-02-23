@@ -31,7 +31,7 @@ nmap } }zz
 nmap { {zz
 
 " Remove highlighting with Ctl + /.
-:nnoremap <silent> <C-_> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <C-_> :nohlsearch<Bar>:echo<CR>
 
 " Show undo history.
 nmap <silent> <leader>u :GundoToggle<CR>
@@ -63,3 +63,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " Add new snippets on the fly.
 nnoremap <leader>s :UltiSnipsEdit<cr>
+
+" Navigabe with alt key then in terminal mode.
+if has('nvim')
+	tnoremap <M-h> <C-\><C-n><C-w>h
+	tnoremap <M-j> <C-\><C-n><C-w>j
+	tnoremap <M-k> <C-\><C-n><C-w>k
+	tnoremap <M-l> <C-\><C-n><C-w>l
+endif

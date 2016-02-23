@@ -18,6 +18,9 @@ let g:editor_root=fnamemodify(resolve(expand($MYVIMRC)), ':h')
 " Set the location for the vim folder (we won't need .vim in our home).
 let &runtimepath.=',' . g:editor_root
 
+" Clean all the autocmd commands to prevent multiple executions on reload.
+autocmd!
+
 " First load up the plugins.
 runtime config/vundle.vim
 
