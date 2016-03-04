@@ -70,3 +70,10 @@ set list listchars=tab:→\ ,trail:·
 " Start NERDTree if vim starts up with no specified files.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Highlight the 80th column, but only on the currently active window
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set colorcolumn=80
+  autocmd WinLeave * set colorcolumn=0
+augroup END
