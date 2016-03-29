@@ -37,6 +37,5 @@ let g:UltiSnipsEditSplit="vertical"
 " Autoformat on writing.
 au BufWrite * :Autoformat
 
-" This will use jscs as syntax checker if there is a .jscsrc file in the
-" project.
-autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
+" Check for syntax when saving
+autocmd! BufWritePost * Neomake
