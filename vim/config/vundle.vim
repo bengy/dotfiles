@@ -17,12 +17,12 @@ let need_bundle_install=0
 " First check if vundle is installed already by checking if the readme exists.
 let vundle_readme=g:editor_root . '/bundle/vundle/README.md'
 if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
-    echo ""
-    silent call mkdir(g:editor_root . '/bundle', "p")
-    silent execute "!git clone https://github.com/gmarik/vundle "
-                    \. g:editor_root . "/bundle/vundle"
-    let need_bundle_install=1
+  echo "Installing Vundle.."
+  echo ""
+  silent call mkdir(g:editor_root . '/bundle', "p")
+  silent execute "!git clone https://github.com/gmarik/vundle "
+        \. g:editor_root . "/bundle/vundle"
+  let need_bundle_install=1
 endif
 
 "" Vundle options (required).
@@ -70,7 +70,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 
 " Syntax checker. Integrates nicley with YCM and vim-airline.
-Plugin 'scrooloose/syntastic'
+Plugin 'benekastah/neomake'
 
 " Tmux navigation (between switching splits inside vim and inside tmux).
 Plugin 'christoomey/vim-tmux-navigator'
@@ -82,13 +82,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'Chiel92/vim-autoformat'
 
 " Language support/enhancement.
-Plugin 'jelera/vim-javascript-syntax'					" Javascript.
+" One syntax definition monster that fullfills my needs.
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'jelera/vim-javascript-syntax' " Javascript.
+"Plugin 'leafgarland/typescript-vim' " Typescript syntax
 
 "Plugin 'tpope/vim-git'									" Git files.
 "Plugin 'pangloss/vim-javascript'						" Javascript I
 "Plugin 'othree/javascript-libraries-syntax.vim'		" Syntax for JS Libraries (incl. Angular)
 "Plugin 'moll/vim-node'									" Node.js
-"Plugin 'othree/html5.vim'								" HTML
 "Plugin 'digitaltoad/vim-jade'							" Jade
 "Plugin '1995eaton/vim-better-css-completion'			" CSS
 "Plugin 'kchmck/vim-coffee-script'						" Coffeescript
@@ -97,22 +99,18 @@ Plugin 'jelera/vim-javascript-syntax'					" Javascript.
 "Plugin 'tpope/vim-markdown'							" Markdown
 "Plugin 'wavded/vim-stylus'								" Stylus
 "Plugin 'jason0x43/vim-js-indent'						" Indentation for JS and TS
-"Plugin 'leafgarland/typescript-vim'					" Typescript syntax
 " Template creation for filetypes.
 "Plugin 'aperezdc/vim-template'
-
-"" Plugins go above this line.
+" Plugins go above this line.
 
 " If vundle was installed this time, automatically start the plugin
 " installation.
 if need_bundle_install == 1
-    echo "Installing Vundles, please ignore key map error messages"
-    echo ""
-    :PluginInstall
+  echo "Installing Vundles, please ignore key map error messages"
+  echo ""
+  :PluginInstall
 endif
 
 "" End of vundle section (required).
 call vundle#end()
-filetype plugin indent on
-
-
+filetype plugin indent o
