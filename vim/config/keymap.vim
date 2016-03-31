@@ -18,8 +18,8 @@ let g:mapleader = ","
 
 " Quickly edit the vimrc file.
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
-let config_path = expand('<sfile>:p:h')
-nmap <silent> <leader>evc :execute 'edit' config_path<CR>
+let g:config_path = expand('<sfile>:p')
+nmap <silent> <leader>evc :execute 'edit' g:config_path<CR>
 " Live reload the vimrc file.
 nmap <silent> <leader>rv :so $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -69,7 +69,6 @@ nnoremap <silent> <M-H> :vertical resize +5<cr>
 nnoremap <silent> <M-L> :vertical resize -5<cr>
 nnoremap <silent> <M-J> :resize +5<cr>
 nnoremap <silent> <M-K> :resize -5<cr>
-
 
 " Navigate with alt key then in terminal mode.
 if has('nvim')
