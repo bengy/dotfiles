@@ -45,11 +45,14 @@ Plugin 'vim-airline/vim-airline'
 " And themes for it.
 Plugin 'vim-airline/vim-airline-themes'
 
+" Dim inactive windows.
+Plugin 'blueyed/vim-diminactive'
+
 " NERD Tree as a file drawer (move and delete files, look at dirs).
 Plugin 'scrooloose/nerdtree'
 
 " CtrlP: Fuzzy search for openening files super fast.
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Nice undo history.
 Plugin 'sjl/gundo.vim'
@@ -84,21 +87,23 @@ Plugin 'Chiel92/vim-autoformat'
 " Language support/enhancement.
 " One syntax definition monster that fullfills my needs.
 Plugin 'sheerun/vim-polyglot'
+
+
 "Plugin 'jelera/vim-javascript-syntax' " Javascript.
 "Plugin 'leafgarland/typescript-vim' " Typescript syntax
 
-"Plugin 'tpope/vim-git'									" Git files.
-"Plugin 'pangloss/vim-javascript'						" Javascript I
-"Plugin 'othree/javascript-libraries-syntax.vim'		" Syntax for JS Libraries (incl. Angular)
-"Plugin 'moll/vim-node'									" Node.js
-"Plugin 'digitaltoad/vim-jade'							" Jade
-"Plugin '1995eaton/vim-better-css-completion'			" CSS
-"Plugin 'kchmck/vim-coffee-script'						" Coffeescript
-"Plugin 'chrisbra/csv.vim'								" CSV
-"Plugin 'leshill/vim-json'								" JSON
-"Plugin 'tpope/vim-markdown'							" Markdown
-"Plugin 'wavded/vim-stylus'								" Stylus
-"Plugin 'jason0x43/vim-js-indent'						" Indentation for JS and TS
+"Plugin 'tpope/vim-git'                 " Git files.
+"Plugin 'pangloss/vim-javascript'           " Javascript I
+"Plugin 'othree/javascript-libraries-syntax.vim'    " Syntax for JS Libraries (incl. Angular)
+"Plugin 'moll/vim-node'                 " Node.js
+"Plugin 'digitaltoad/vim-jade'              " Jade
+"Plugin '1995eaton/vim-better-css-completion'     " CSS
+"Plugin 'kchmck/vim-coffee-script'            " Coffeescript
+"Plugin 'chrisbra/csv.vim'                " CSV
+"Plugin 'leshill/vim-json'                " JSON
+"Plugin 'tpope/vim-markdown'              " Markdown
+"Plugin 'wavded/vim-stylus'               " Stylus
+"Plugin 'jason0x43/vim-js-indent'           " Indentation for JS and TS
 " Template creation for filetypes.
 "Plugin 'aperezdc/vim-template'
 " Plugins go above this line.
@@ -113,4 +118,4 @@ endif
 
 "" End of vundle section (required).
 call vundle#end()
-filetype plugin indent o
+filetype plugin indent on
