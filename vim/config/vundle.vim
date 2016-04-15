@@ -45,9 +45,6 @@ Plugin 'vim-airline/vim-airline'
 " And themes for it.
 Plugin 'vim-airline/vim-airline-themes'
 
-" Dim inactive windows.
-Plugin 'blueyed/vim-diminactive'
-
 " NERD Tree as a file drawer (move and delete files, look at dirs).
 Plugin 'scrooloose/nerdtree'
 
@@ -87,7 +84,6 @@ Plugin 'Chiel92/vim-autoformat'
 " Language support/enhancement.
 " One syntax definition monster that fullfills my needs.
 Plugin 'sheerun/vim-polyglot'
-
 
 "Plugin 'jelera/vim-javascript-syntax' " Javascript.
 "Plugin 'leafgarland/typescript-vim' " Typescript syntax

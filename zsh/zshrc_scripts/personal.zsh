@@ -21,10 +21,10 @@ export SUDO_EDITOR=$EDITOR
 # SSH shorts for ssh access to university servers.
 alias marvin='raubn@marvin.informatik.uni-stuttgart.de'
 alias marvinftp='sftp raubn@marvin.informatik.uni-stuttgart.de'
-alias marvinssh='ssh raubn@marvin.informatik.uni-stuttgart.de'
 alias marvinproxy='ssh raubn@marvin.informatik.uni-stuttgart.de -D 8081'
 
 # Enable prime gpu offloading.
 alias offload='xrandr --setprovideroffloadsink nouveau Intel'
 
 alias dance='cd $HOME/projects/dance'
+alias pcvc='cd $HOME/studium/pcvc/OGL4Core'

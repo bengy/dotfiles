@@ -24,12 +24,23 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 
 
+" Highlight red if a line goes beyond the 80 characters.
 augroup vimrc_autocmds
-  " Highlight red if a line goes beyond the 80 characters.
   autocmd BufEnter * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
   " Match every character in column greater or equal 81 as overlength.
   autocmd BufEnter * match OverLength /\%81v.*/
 augroup END
+" Let me toggle highlighting overlength.
+let s:activatedOverLength = 1
+function! ToggleOverLength()
+    if s:activatedOverLength == 0
+        let s:activatedOverLength = 1
+        highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    else
+        let s:activatedOverLength = 0
+        highlight clear OverLength
+    endif
+endfunction
 
 " Highlight trailing whitespaces in an orange color.
 highlight TrailingWhitespaces ctermbg=red ctermfg=white guibg=#ffa500

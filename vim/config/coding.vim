@@ -36,6 +36,13 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Autoformat on writing.
 au BufWrite * :Autoformat
+" Disable fallback to vim's indent file
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 
 " Check for syntax when saving
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
+
+" YCM Completer whitelisted configs.
+let g:ycm_extra_conf_globlist = ['~/studium/**/*']
