@@ -77,3 +77,6 @@ if has('nvim')
   tnoremap <M-k> <C-\><C-n><C-w>k
   tnoremap <M-l> <C-\><C-n><C-w>l
 endif
+
+" Toogle highlight overlength
+nnoremap <leader>hol :call ToggleOverLength()<CR>

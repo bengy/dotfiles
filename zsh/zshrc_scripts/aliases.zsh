@@ -23,7 +23,7 @@ alias df='df -h'
 alias du='du -c -h'
 
 # Compile pdfs from latex.
-alias pdfcompile='latexmk -pdf -pvc --silent '
+alias pdfcompile='latexmk -pdf -pvc --silent *.tex'
 
 # Jumping around directories.
 alias ...="cd ../.."

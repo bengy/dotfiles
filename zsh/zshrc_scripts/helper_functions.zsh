@@ -10,6 +10,8 @@
 
 ## Little elves that do stuff.
 
+alias marvinssh='ssh raubn@marvin.informatik.uni-stuttgart.de'
+
 # Print on zarquon (Hauptstudiumspool).
 function printzarquon () {
 	if [[ $1 != "" ]]; then
