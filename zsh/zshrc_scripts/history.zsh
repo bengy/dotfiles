@@ -17,7 +17,7 @@ HISTFILE=$ZDOTDIR/.history
 HISTSIZE=10000
 
 # History to save to file.
-SAVEHIST=5000
+SAVEHIST=50000
 
 # Append history to file instead of overwriting.
 setopt appendhistory
