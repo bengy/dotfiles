@@ -39,12 +39,6 @@ nmap <silent> <leader>u :GundoToggle<CR>
 " Open Nerd Tree.
 map <leader>n :NERDTreeToggle<CR>
 
-" Open Fuzzy file finder in file mode.
-nmap <leader>t :CtrlP<CR>
-
-" Open Fuzzy file finder in buffer mode.
-nmap <leader>b :CtrlPBuffer<CR>
-
 " Use switch between window panes with alt+h/j/k/l.
 let g:tmux_navigator_no_mappings = 1
 
@@ -80,3 +74,6 @@ endif
 
 " Toogle highlight overlength
 nnoremap <leader>hol :call ToggleOverLength()<CR>
+
+" CommandT like fuzzy file finder
+nnoremap <leader>t :FZF<cr>

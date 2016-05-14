@@ -1,5 +1,5 @@
 vim
 backup/*
 .netrwhist
-bundle/*
+plugins/*
 startup/personal.vim
