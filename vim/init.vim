@@ -22,7 +22,7 @@ let &runtimepath.=',' . g:editor_root
 autocmd!
 
 " First load up the plugins.
-runtime config/vundle.vim
+runtime config/plugins.vim
 
 " Set some vim options.
 runtime config/options.vim
