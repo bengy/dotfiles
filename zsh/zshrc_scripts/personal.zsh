@@ -26,5 +26,8 @@ alias marvinproxy='ssh raubn@marvin.informatik.uni-stuttgart.de -D 8081'
 # Enable prime gpu offloading.
 alias offload='xrandr --setprovideroffloadsink nouveau Intel'
 
-alias dance='cd $HOME/projects/dance'
-alias pcvc='cd $HOME/studium/pcvc/OGL4Core'
+alias dance='cd $HOME/projects/dance; zsh dance.sh'
+alias dotfiles='cd $HOME/.dotfiles; zsh dotfiles.sh'
+alias pcvc='cd $HOME/studium/pcvc/OGL4Core/Plugins/PCVC'
+alias gma='cd $HOME/studium/gma'
+alias migration='cd $HOME/projects/migration-demo; zsh migration.sh'

@@ -42,8 +42,5 @@ set lazyredraw
 " Smother changes.
 set ttyfast
 
-" Always jump to the current files directory.
-set autochdir
-
 " Allow hidden buffer changes (no saving between switching).
 set hidden
