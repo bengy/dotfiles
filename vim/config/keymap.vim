@@ -76,4 +76,6 @@ endif
 nnoremap <leader>hol :call ToggleOverLength()<CR>
 
 " CommandT like fuzzy file finder
+let FZF_DEFAULT_COMMAND='pt -g ""'
+let FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 nnoremap <leader>t :FZF<cr>
