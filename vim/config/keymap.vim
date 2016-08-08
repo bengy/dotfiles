@@ -79,3 +79,8 @@ nnoremap <leader>hol :call ToggleOverLength()<CR>
 let $FZF_DEFAULT_COMMAND='pt -g ""'
 let $FZF_CTRL_T_COMMAND='pt -g ""'
 nnoremap <leader>t :FZF<cr>
+
+" Open file from the current path.
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
