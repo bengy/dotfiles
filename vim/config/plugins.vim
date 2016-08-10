@@ -25,6 +25,9 @@ Plug 'scrooloose/nerdtree'
 " Nice undo history.
 Plug 'sjl/gundo.vim'
 
+" Toggle comments.
+Plug 'scrooloose/nerdcommenter'
+
 " Easier navigation with <leader><leader> motion.
 Plug 'Lokaltog/vim-easymotion'
 
