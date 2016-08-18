@@ -42,7 +42,25 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 
 " Check for syntax when saving
-" autocmd! BufWritePost * Neomake
+autocmd! BufWritePost * Neomake
+" Use the current projects tsconfig.
+function! neomake#makers#ft#typescript#tsc()
+    return {
+          \ 'args': ['--project', getcwd(), '--noEmit'],
+          \ 'append_file': 0,
+          \ 'errorformat':
+          \   '%E%f %#(%l\,%c): error %m,' .
+          \   '%E%f %#(%l\,%c): %m,' .
+          \   '%Eerror %m,' .
+          \   '%C%\s%\+%m'
+        \ }
+endfunction
+" Error and Warning color.
+highlight NeomakeErrorSign ctermfg=1
+highlight NeomakeWarningSign ctermfg=3
+highlight NeomakeMessageSign ctermfg=4
+highlight NeomakeInfoSign ctermfg=2
+
 
 " YCM Completer whitelisted configs.
 let g:ycm_extra_conf_globlist = ['~/studium/**/*']

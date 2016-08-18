@@ -88,3 +88,4 @@ augroup BgHighlight
   autocmd WinEnter * set colorcolumn=80
   autocmd WinLeave * set colorcolumn=0
 augroup END
+
