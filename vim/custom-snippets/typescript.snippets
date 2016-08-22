@@ -1,0 +1,36 @@
+snippet service "Angular2 Service."
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class $1Service {
+  $0
+}
+endsnippet
+
+snippet component "Angular2 Component"
+import {
+  Component,
+  NgModule,
+} from '@angular/core';
+
+@Component({
+  moduleId: module.id,
+  selector: '$1',
+  templateUrl: '$1.html',
+  styleUrls: ['$1.css'],
+})
+
+/**
+ * @brief $2
+ */
+export class $3 {
+  $0
+}
+
+@NgModule({
+  exports: [$3],
+  declarations: [$3]
+})
+export class $3Module { }
+
+endsnippet
