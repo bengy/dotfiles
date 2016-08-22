@@ -33,6 +33,7 @@ set autoindent
 
 " When editing the snippets file for ultisnips open up a spit window.
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[g:editor_root . '/custom-snippets']
 
 " Autoformat on writing.
 au BufWrite * :Autoformat
