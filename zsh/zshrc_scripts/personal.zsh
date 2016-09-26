@@ -27,6 +27,7 @@ alias marvinproxy='ssh raubn@marvin.informatik.uni-stuttgart.de -D 8081'
 alias offload='xrandr --setprovideroffloadsink nouveau Intel'
 
 alias dance='cd $HOME/projects/dance/frontend; zsh dance.sh'
+alias flick='cd $HOME/projects/flickstuff-android; android-studio'
 alias dotfiles='cd $HOME/.dotfiles; zsh dotfiles.sh'
 alias pcvc='cd $HOME/studium/pcvc/OGL4Core/Plugins/PCVC'
 alias gma='cd $HOME/studium/gma'
