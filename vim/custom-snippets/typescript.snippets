@@ -34,3 +34,29 @@ export class $3 {
 export class $3Module { }
 
 endsnippet
+
+snippet directive "Angular2 Attribute Directive"
+import {
+  Directive,
+  ElementRef,
+  NgModule,
+} from '@angular/core';
+
+@Directive({
+  selector: '$1',
+})
+
+/**
+ * @brief $2
+ */
+export class $3 {
+  $0
+}
+
+@NgModule({
+  exports: [$3],
+  declarations: [$3]
+})
+export class $3Module { }
+
+endsnippet
