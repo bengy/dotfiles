@@ -1,38 +1,31 @@
 snippet service "Angular2 Service."
+// Libraries
 import { Injectable } from '@angular/core';
 
+/**
+ * @brief $2
+ */
 @Injectable()
-export class $1Service {
-  $0
+export class `!p snip.rv = ''.join(x.title() for x in snip.fn[:snip.fn.find('.')].split('-'))`Service {
+	$0
 }
 endsnippet
 
 snippet component "Angular2 Component"
-import {
-  Component,
-  NgModule,
-} from '@angular/core';
+// Libraries
+import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: '$1',
-  templateUrl: '$1.html',
-  styleUrls: ['$1.css'],
+  selector: '`!p snip.rv = snip.fn[:snip.fn.find('.')]`',
+  templateUrl: '`!p snip.rv = snip.fn[:snip.fn.rfind('.')]`.html',
+  styleUrls: ['`!p snip.rv = snip.fn[:snip.fn.rfind('.')]`.css'],
 })
 
 /**
  * @brief $2
  */
-export class $3 {
-  $0
-}
-
-@NgModule({
-  exports: [$3],
-  declarations: [$3]
-})
-export class $3Module { }
-
+export class `!p snip.rv = ''.join(x.title() for x in snip.fn[:snip.fn.find('.')].split('-'))`Component {}
 endsnippet
 
 snippet directive "Angular2 Attribute Directive"
