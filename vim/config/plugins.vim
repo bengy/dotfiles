@@ -46,8 +46,8 @@ Plug 'Valloric/YouCompleteMe', {'do': 'python2 ./install.py --all'}
 Plug 'junegunn/fzf', {'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Syntax checker. Integrates nicley with YCM and vim-airline.
-Plug 'maralla/validator.vim'
+" Syntax checker.
+Plug 'w0rp/ale'
 
 " Tmux navigation (between switching splits inside vim and inside tmux).
 Plug 'christoomey/vim-tmux-navigator'
