@@ -22,6 +22,7 @@ colorscheme solarized
 let g:airline_powerline_fonts = 1
 " Set the theme to match our color theme.
 let g:airline_theme='solarized'
+let g:airline_section_error = '%{ALEGetStatusLine()}'
 
 
 " Highlight red if a line goes beyond the 80 characters.

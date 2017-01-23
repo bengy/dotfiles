@@ -42,9 +42,5 @@ let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 
-let g:validator_permament_sign = 1
-let g:validator_auto_open_quickfix = 1
-
-
 " YCM Completer whitelisted configs.
 let g:ycm_extra_conf_globlist = ['~/studium/**/*']
