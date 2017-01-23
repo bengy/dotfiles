@@ -47,7 +47,7 @@ Plug 'junegunn/fzf', {'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Syntax checker. Integrates nicley with YCM and vim-airline.
-Plug 'benekastah/neomake'
+Plug 'maralla/validator.vim'
 
 " Tmux navigation (between switching splits inside vim and inside tmux).
 Plug 'christoomey/vim-tmux-navigator'
