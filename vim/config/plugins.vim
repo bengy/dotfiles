@@ -61,5 +61,9 @@ Plug 'Chiel92/vim-autoformat'
 " Language support/enhancement.
 " One syntax definition monster that fullfills my needs.
 Plug 'sheerun/vim-polyglot'
+Plug 'jez/vim-ispc'
+
+" File templates
+Plug 'aperezdc/vim-template'
 
 call plug#end()
