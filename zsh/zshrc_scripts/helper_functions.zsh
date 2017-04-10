@@ -45,3 +45,18 @@ function mkcd() {
     fi
 }
 
+function pdfcompile() {
+    if [[ $1 = "" ]]; then
+        files = (*.tex)
+        if [[ "${#files[*]}" -eq 1 ]]; then
+            latexmk -pdf -pvc --silent *.tex
+        elif [[ "${#files[*]}" -gt 1 ]]; then
+            echo "There are multiple tex files. Use: pdfcompile  <filename>"
+        else
+            echo "There are files maching *.tex"
+        fi
+    else
+        latexmk -pdf -pvc --silent $1
+    fi
+}
+
