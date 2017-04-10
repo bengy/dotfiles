@@ -66,4 +66,7 @@ Plug 'jez/vim-ispc'
 " File templates
 Plug 'aperezdc/vim-template'
 
+" Local vimrc files for project specific settings.
+Plug 'embear/vim-localvimrc'
+
 call plug#end()
