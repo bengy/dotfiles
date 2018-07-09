@@ -1,0 +1,1 @@
+/home/benjamin/.dotfiles/zsh/zprofile

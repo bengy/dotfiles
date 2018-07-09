@@ -1,48 +1,46 @@
-! ██╗  ██╗██████╗ ███████╗███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗███████╗
-! ╚██╗██╔╝██╔══██╗██╔════╝██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝██╔════╝
-!  ╚███╔╝ ██████╔╝█████╗  ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗  ███████╗
-!  ██╔██╗ ██╔══██╗██╔══╝  ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝  ╚════██║
-! ██╔╝ ██╗██║  ██║███████╗███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗███████║
-! ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝╚══════╝
-!
 ! Author:  Benjamin Rau
-! License: WTFPL
+! License: MIT
 
 ! Fonts to be used.
-! Somehow just using Inconsolata for Powerline does not work (unable to calculate font width).
-! But combined with the DejaVu Sans Mono for Powerline, it will use its symbols.
-urxvt*font: xft:Inconsolata\-g:size=10:antialias=true, xft:DejaVu Sans Mono for Powerline:size=10:antialias=true
-
-! Reduce the spacing between the letters a little bit in order to keep text
-! readable.
+urxvt*font: xft:Droid Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
+urxvt*boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=16:antialias=true:hinting=true
+urxvt*italicFont: xft:Droid Sans Mono for Powerline:italic:pixelsize=16:antialias=true:hinting=true
+urxvt*boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:pixelsize=16:antialias=true:hinting=true
 urxvt*letterSpace: -1
 
-! Perl extensions to load (Resize fonts on the fly, clipboard copy+paste).
-urxvt*perl-ext-common: font-size,clipboard,url-select
+! Perl extensions to load (clipboard copy+paste, clickable urls, yankable url, resize on the fly).
+urxvt*perl-ext-common: default,clipboard,matcher,url-select,resize-font
 
 ! Scrollbar on the right (like most other applications I am using).
 urxvt*scrollBar_right: true
 
 ! Enable Ctr+Shift.
-urxvt*iso14755:   false
-urxvt*iso14755_52:  false
+urxvt*iso14755:	   false
+urxvt*iso14755_52: false
 
 ! Clipboard support.
-urxvt*keysym.S-C-C:     perl:clipboard:copy
-urxvt*keysym.S-C-V:     perl:clipboard:paste
+urxvt*keysym.S-C-C:       perl:clipboard:copy
+urxvt*keysym.S-C-V:	  perl:clipboard:paste
 urxvt*clipboard.copycmd:  xsel -ib
 urxvt*clipboard.pastecmd: xsel -ob
 
 ! Selectable URLs.
-urxvt*keysym.M-u:     perl:url-select:select_next
+urxvt*url-launcher:    /usr/bin/xdg-open
+urxvt*matcher.button:  1
+urxvt*keysim.C-Delete: perl:matcher:last
+urxvt*keysim.M-Delete: perl:matcher:list
+urxvt*matcher.rend.0:  Uline Bold fg5
+
+! Yankable URLs.
+urxvt*keysym.M-u:     	    perl:url-select:select_next
 urxvt*url-select.launcher:  /usr/bin/xdg-open
 urxvt*url-select.underline: true
 
 ! Resize font size on +/- and keypad add/substract.
-urxvt*keysym.C-KP_Add:    perl:font-size:increase
-urxvt*keysym.C-KP_Subtract: perl:font-size:decrease
-urxvt*keysym.C-plus:    perl:font-size:increase
-urxvt*keysym.C-minus:   perl:font-size:decrease
+urxvt*keysym.C-KP_Add:    resize-font:bigger
+urxvt*keysym.C-KP_Subtract: resize-font:smaller
+urxvt*keysym.C-plus:    resize-font:bigger
+urxvt*keysym.C-minus:   resize-font:smaller
 
 ! Save number lines in the scrollback buffer.
 urxvt*saveLines: 10000

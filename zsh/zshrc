@@ -1,18 +1,8 @@
-# ███████╗███████╗██╗  ██╗██████╗  ██████╗
-# ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║     
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║     
-# ███████╗███████║██║  ██║██║  ██║╚██████╗
-# ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
-#
 # Author:  Benjamin
-# License: WTFPL
+# License: MIT
 
 # Set the directory for the scripts to use.
 DIR=$ZDOTDIR/zshrc_scripts
 
 # Load the config files.
 for zshconfig ($DIR/*.zsh) source $zshconfig
-
-# Last think to be loaded is syntax highlighting for zsh.
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

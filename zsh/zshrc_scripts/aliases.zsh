@@ -1,10 +1,3 @@
-# ███████╗███████╗██╗  ██╗██████╗  ██████╗
-# ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║
-# ███████╗███████║██║  ██║██║  ██║╚██████╗
-# ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
-#
 # Author:  Benjamin
 # License: WTFPL
 
@@ -31,3 +24,5 @@ alias back='cd $OLDPWD'
 alias n="neovim"
 alias t="tmux"
 alias o='xdg-open'
+
+alias tmux='TERM=xterm-256color tmux -f "$XDG_CONFIG_HOME"/tmux/tmux.conf'

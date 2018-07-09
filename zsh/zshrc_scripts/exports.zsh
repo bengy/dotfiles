@@ -1,12 +1,5 @@
-# ███████╗███████╗██╗  ██╗██████╗  ██████╗
-# ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#   ███╔╝ ███████╗███████║██████╔╝██║
-#  ███╔╝  ╚════██║██╔══██║██╔══██╗██║
-# ███████╗███████║██║  ██║██║  ██║╚██████╗
-# ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
-#
 # Author:  Benjamin
-# License: WTFPL
+# License: MIT
 
 ## There is an export ban on zshenv enforced by the united nations of bourne-compatible shells.
 ## (/etc/profile is being sourced after zshenv overriding exports there).
