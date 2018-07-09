@@ -1,12 +1,5 @@
-" ██╗   ██╗██╗███╗   ███╗
-" ██║   ██║██║████╗ ████║
-" ██║   ██║██║██╔████╔██║
-" ╚██╗ ██╔╝██║██║╚██╔╝██║
-"  ╚████╔╝ ██║██║ ╚═╝ ██║
-"   ╚═══╝  ╚═╝╚═╝     ╚═╝
-"
 " Author:  Benjamin Rau
-" License: WTFPL
+" License: MIT
 
 "" Using vim-plug to manage plugins.
 call plug#begin(g:editor_root . '/plugins')
@@ -41,6 +34,9 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Need this to complete my autocomplete needs :-).
 Plug 'Valloric/YouCompleteMe', {'do': 'python2 ./install.py --all'}
+
+" C# IDE features
+Plug 'OmniSharp/omnisharp-vim'
 
 " Fuzy finder.
 Plug 'junegunn/fzf', {'do': './install --all' }

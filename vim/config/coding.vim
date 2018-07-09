@@ -1,12 +1,5 @@
-" ██╗   ██╗██╗███╗   ███╗
-" ██║   ██║██║████╗ ████║
-" ██║   ██║██║██╔████╔██║
-" ╚██╗ ██╔╝██║██║╚██╔╝██║
-"  ╚████╔╝ ██║██║ ╚═╝ ██║
-"   ╚═══╝  ╚═╝╚═╝     ╚═╝
-"
 " Author:  Benjamin Rau
-" License: WTFPL
+" License: MIT
 
 "" All the things related to make coding easier.
 
