@@ -2,5 +2,5 @@
 # License: MIT
 
 # Set the directory for all the other zsh config files.
-ZDOTDIR=$(dirname $(readlink -f $HOME/.zshenv))
+ZDOTDIR=$(dirname $(readlink $HOME/.zshenv))
 
