@@ -3,22 +3,6 @@
 
 ## Little elves that do stuff.
 
-alias marvinssh='ssh raubn@marvin.informatik.uni-stuttgart.de'
-
-# Print on zarquon (Hauptstudiumspool).
-function printzarquon () {
-	if [[ $1 != "" ]]; then
-		cat "$1" | marvinssh lpr -P zarquon
-	fi
-}
-
-# Print on duesentrieb (Grundstudiumspool).
-function printduesen () {
-	if [[ $1 != "" ]]; then
-		cat "$1"|marvinssh lpr -P duesentrieb
-	fi
-}
-
 # Find a file and cd to the folder where it resides in.
 function cdfile () {
     if [[ $1 = "" ]]; then
