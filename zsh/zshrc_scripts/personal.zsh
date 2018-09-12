@@ -11,18 +11,11 @@ export SYSTEMD_EDITOR=$EDITOR
 # Set the editor for the sudoer file.
 export SUDO_EDITOR=$EDITOR
 
-# SSH shorts for ssh access to university servers.
-alias marvin='raubn@marvin.informatik.uni-stuttgart.de'
-alias marvinftp='sftp raubn@marvin.informatik.uni-stuttgart.de'
-alias marvinproxy='ssh raubn@marvin.informatik.uni-stuttgart.de -D 8081'
+export GOPATH=$HOME/go
 
-# Enable prime gpu offloading.
-alias offload='xrandr --setprovideroffloadsink nouveau Intel'
+# Add users global npm packages.
+export PATH="$HOME/npm/bin:${PATH}"
+export PATH="$HOME/.npm-global/bin:${PATH}"
+export PATH="$GOPATH/bin:${PATH}"
+export CHROME_BIN=chromium
 
-alias dance='cd $HOME/projects/dance/frontend; zsh dance.sh'
-alias flick='cd $HOME/projects/flickstuff-android; android-studio'
-alias dotfiles='cd $HOME/.dotfiles; zsh dotfiles.sh'
-alias pcvc='cd $HOME/studium/pcvc/OGL4Core/Plugins/PCVC'
-alias gma='cd $HOME/studium/gma'
-alias migration='cd $HOME/projects/migration-demo; zsh migration.sh'
-alias master='cd $HOME/studium/master/code/comparison'
