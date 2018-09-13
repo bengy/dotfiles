@@ -1,6 +1,7 @@
 .history
 .zcompdump*
 .zlogin
+.zhistory
 .zshrc
 zshrc_scripts/personal.zsh
 zsh/oh-my-zsh/*
