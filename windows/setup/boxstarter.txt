@@ -1,0 +1,39 @@
+# Install commonly used software
+# Git and related.
+cinst git.install
+cinst poshgit
+cinst git-lsf
+cinst sourcetree
+
+# browser
+cinst chromium
+cinst firefox
+
+# tools
+cinst blender
+cinst gimp
+cinst inkscape
+cinst keepass
+# Use the unity hub instead 
+# cinst unity 
+
+cinst visualstudio2017professional
+cinst vscode
+cinst vscode-csharp
+cinst notepadplusplus
+
+# console
+cinst cmder
+cinst neovim
+
+# scripts/shortcuts
+cinst autohotkey
+
+# Windows Explorer options.
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
+Enable-RemoteDesktop 
+Disable-BingSearch
+Install-WindowsUpdate -Full
+
+# Set the US-keyboard
+Set-WinUserLanguageList -LanguageList en-US
