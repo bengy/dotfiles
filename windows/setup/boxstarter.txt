@@ -1,9 +1,108 @@
+# Description: Boxstarter Script
+# Author: Benjamin Rau
+ 
+# For installations
+Disable-UAC
+
+# Windows Explorer options.
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
+
+# Taskbar
+Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -Lock
+Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -AlwaysShowIconsOn
+
+# Windows Subsystems/Features
+choco install Microsoft-Hyper-V-All -source windowsFeatures
+choco install Microsoft-Windows-Subsystem-Linux -source windowsfeatures
+
+# Disable unneccesary stuff
+Disable-BingSearch
+Disable-GameBarTips
+# And uninstall bloat
+Get-AppxPackage Microsoft.3DBuilder | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsAlarms | Remove-AppxPackage
+Get-AppxPackage *Autodesk* | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingFinance | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingNews | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingSports | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingWeather | Remove-AppxPackage
+Get-AppxPackage *BubbleWitch* | Remove-AppxPackage
+Get-AppxPackage king.com.CandyCrush* | Remove-AppxPackage
+Get-AppxPackage Microsoft.CommsPhone | Remove-AppxPackage
+Get-AppxPackage *Dell* | Remove-AppxPackage
+Get-AppxPackage *Dropbox* | Remove-AppxPackage
+Get-AppxPackage *Facebook* | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsFeedbackHub | Remove-AppxPackage
+Get-AppxPackage Microsoft.Getstarted | Remove-AppxPackage
+Get-AppxPackage *Keeper* | Remove-AppxPackage
+Get-AppxPackage microsoft.windowscommunicationsapps | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsMaps | Remove-AppxPackage
+Get-AppxPackage *MarchofEmpires* | Remove-AppxPackage
+Get-AppxPackage Microsoft.Messaging | Remove-AppxPackage
+Get-AppxPackage *Minecraft* | Remove-AppxPackage
+Get-AppxPackage *Netflix* | Remove-AppxPackage
+Get-AppxPackage Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
+Get-AppxPackage Microsoft.OneConnect | Remove-AppxPackage
+Get-AppxPackage Microsoft.Office.OneNote | Remove-AppxPackage
+Get-AppxPackage Microsoft.People | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsPhone | Remove-AppxPackage
+Get-AppxPackage Microsoft.Windows.Photos | Remove-AppxPackage
+Get-AppxPackage *Plex* | Remove-AppxPackage
+Get-AppxPackage Microsoft.SkypeApp | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsSoundRecorder | Remove-AppxPackage
+Get-AppxPackage *Solitaire* | Remove-AppxPackage
+Get-AppxPackage Microsoft.MicrosoftStickyNotes | Remove-AppxPackage
+Get-AppxPackage Microsoft.Office.Sway | Remove-AppxPackage
+Get-AppxPackage *Twitter* | Remove-AppxPackage
+Get-AppxPackage Microsoft.XboxApp | Remove-AppxPackage
+Get-AppxPackage Microsoft.XboxIdentityProvider | Remove-AppxPackage
+Get-AppxPackage *DisneyMagicKingdom* | Remove-AppxPackage
+Get-AppxPackage *HiddenCityMysteryofShadows* | Remove-AppxPackage
+Get-AppxPackage *DolbyAccess* | Remove-AppxPackage
+
+# Windows Settings
+# Privacy: Let apps use my advertising ID: Disable
+Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo -Name Enabled -Type DWord -Value 0
+
+# Privacy: SmartScreen Filter for Store Apps: Disable
+Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost -Name EnableWebContentEvaluation -Type DWord -Value 0
+
+# WiFi Sense: HotSpot Sharing: Disable
+Set-ItemProperty -Path HKLM:\Software\Microsoft\PolicyManager\default\WiFi\AllowWiFiHotSpotReporting -Name value -Type DWord -Value 0
+
+# WiFi Sense: Shared HotSpot Auto-Connect: Disable
+Set-ItemProperty -Path HKLM:\Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots -Name value -Type DWord -Value 0
+
+# Start Menu: Disable Bing Search Results
+Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search -Name BingSearchEnabled -Type DWord -Value 0
+
+# Disable Telemetry (requires a reboot to take effect)
+# Note this may break Insider builds for your organization
+Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection -Name AllowTelemetry -Type DWord -Value 0
+Get-Service DiagTrack,Dmwappushservice | Stop-Service | Set-Service -StartupType Disabled
+
+# Change Explorer home screen back to "This PC"
+Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name LaunchTo -Type DWord -Value 1
+
+# Better File Explorer
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneExpandToCurrentFolder -Value 1		
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneShowAllFolders -Value 1		
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name MMTaskbarMode -Value 2
+
+# Disable the Lock Screen (the one before password prompt - to prevent dropping the first character)
+Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization -Name NoLockScreen -Type DWord -Value 1
+
+# Disable Xbox Gamebar
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" -Name AppCaptureEnabled -Type DWord -Value 0
+Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name GameDVR_Enabled -Type DWord -Value 0
+
+# Turn off People in Taskbar
+Set-ItemProperty -Path "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" -Name PeopleBand -Type DWord -Value 0
+
 # Install commonly used software
 # Git and related.
 cinst git.install
-cinst poshgit
 cinst git-lsf
-cinst sourcetree
 
 # browser
 cinst chromium
@@ -14,13 +113,10 @@ cinst blender
 cinst gimp
 cinst inkscape
 cinst keepass
-# Use the unity hub instead 
-# cinst unity 
-
-cinst visualstudio2017professional
-cinst vscode
-cinst vscode-csharp
-cinst notepadplusplus
+cinst thunderbird
+cinst libreoffice-fresh
+cinst darktable
+cinst vlc
 
 # console
 cinst cmder
@@ -29,11 +125,11 @@ cinst neovim
 # scripts/shortcuts
 cinst autohotkey
 
-# Windows Explorer options.
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
-Enable-RemoteDesktop 
-Disable-BingSearch
-Install-WindowsUpdate -Full
-
 # Set the US-keyboard
 Set-WinUserLanguageList -LanguageList en-US
+Enable-RemoteDesktop
+
+# Restore Temporary Settings
+Enable-UAC
+Enable-MicrosoftUpdate
+Install-WindowsUpdate -acceptEula
