@@ -13,7 +13,6 @@ Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -AlwaysShowIconsOn
 
 # Windows Subsystems/Features
 choco install Microsoft-Hyper-V-All -source windowsFeatures
-choco install Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 
 # Disable unneccesary stuff
 Disable-BingSearch
