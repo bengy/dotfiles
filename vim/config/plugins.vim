@@ -1,4 +1,4 @@
-" Author:  Benjamin Rau
+
 " License: MIT
 
 "" Using vim-plug to manage plugins.
@@ -14,9 +14,18 @@ Plug 'vim-airline/vim-airline-themes'
 
 " NERD Tree as a file drawer (move and delete files, look at dirs).
 Plug 'scrooloose/nerdtree'
+" Syntax highlight (filetype)
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Fancy icons.
+Plug 'ryanoasis/vim-devicons'
+" Git status in nerdtree.
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'tsony-tsonev/nerdtree-git-plugin'
+
+
 
 " Nice undo history.
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
 
 " Toggle comments.
 Plug 'scrooloose/nerdcommenter'
@@ -31,19 +40,29 @@ Plug 'tpope/vim-fugitive'
 " Awsome snippets, who types nowadays anyways :D (said the vim user).
 " Snippets separated from engine. Here are some.
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" React Native code snippets
+Plug 'morgsmccauley/vim-react-native-snippets'
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+" React code snippets
+Plug 'epilande/vim-react-snippets'
 
 " Need this to complete my autocomplete needs :-).
-Plug 'Valloric/YouCompleteMe', {'do': 'python2 ./install.py --all'}
+" Plug 'Valloric/YouCompleteMe', {'do': 'python2 ./install.py --all'}
+"if has('nvim')
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+  "Plug 'Shougo/deoplete.nvim'
+  "Plug 'roxma/nvim-yarp'
+  "Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+" Autoformatting. Uses native formatters.
+" Plug 'Chiel92/vim-autoformat'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" C# IDE features
-Plug 'OmniSharp/omnisharp-vim'
 
 " Fuzy finder.
-Plug 'junegunn/fzf', {'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
-" Syntax checker.
-Plug 'w0rp/ale'
 
 " Tmux navigation (between switching splits inside vim and inside tmux).
 Plug 'christoomey/vim-tmux-navigator'
@@ -51,8 +70,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " Change the surroundings.
 Plug 'tpope/vim-surround'
 
-" Autoformatting. Uses native formatters.
-Plug 'Chiel92/vim-autoformat'
 
 " Language support/enhancement.
 " One syntax definition monster that fullfills my needs.
@@ -64,5 +81,8 @@ Plug 'aperezdc/vim-template'
 
 " Local vimrc files for project specific settings.
 Plug 'embear/vim-localvimrc'
+
+" Browser vim.
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()

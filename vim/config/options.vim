@@ -1,12 +1,5 @@
-" ██╗   ██╗██╗███╗   ███╗
-" ██║   ██║██║████╗ ████║
-" ██║   ██║██║██╔████╔██║
-" ╚██╗ ██╔╝██║██║╚██╔╝██║
-"  ╚████╔╝ ██║██║ ╚═╝ ██║
-"   ╚═══╝  ╚═╝╚═╝     ╚═╝
-"
 " Author:  Benjamin Rau
-" License: WTFPL
+" License: MIT
 
 
 "" Toggle different settings for vim.

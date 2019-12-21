@@ -7,7 +7,7 @@
 setopt autocd
 
 # Use extended globbing (like recursive globbing, negation, ...).
-setopt extendedglob 
+setopt extendedglob
 
 # This is not R2D2.
 unsetopt beep

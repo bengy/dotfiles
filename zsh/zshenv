@@ -3,4 +3,3 @@
 
 # Set the directory for all the other zsh config files.
 ZDOTDIR=$(dirname $(readlink $HOME/.zshenv))
-

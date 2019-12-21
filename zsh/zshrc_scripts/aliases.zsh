@@ -4,17 +4,17 @@
 ## Alias - short for "at another time or place".
 
 # List files.
-alias ls='ls --color=auto'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 # Show disk usage.
 alias df='df -h'
 alias du='du -c -h'
 
 # Jumping around directories.
-alias ...="cd ../.."
-alias ....="cd ../../.."
 alias back='cd $OLDPWD'
 
 # Very short aliases for most used commands.

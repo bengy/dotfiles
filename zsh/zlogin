@@ -3,10 +3,11 @@
 #
 # User configuration sourced by login shells
 #
-
-# Initialize zim
-[[ -s ${ZIM_HOME}/login_init.zsh ]] && source ${ZIM_HOME}/login_init.zsh# Author:  Benjamin Rau
+# Author:  Benjamin Rau
 # License: MIT
 
+# Initialize zim
+[[ -s ${ZIM_HOME}/login_init.zsh ]] && source ${ZIM_HOME}/login_init.zsh
+
 # Startx when loging in on first vt.
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && sway
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx

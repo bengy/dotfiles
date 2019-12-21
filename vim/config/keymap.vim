@@ -1,7 +1,7 @@
 " Author:  Benjamin Rau
 " License: MIT
 
-"" Here are all the mappings that make you faster (as well as those"" you saw somewhere but have now forgotten about them).
+"" Here are all the mappings that make you faster (as well as those you saw somewhere but have now forgotten about them).
 
 " See :help index.txt for used mappings.
 
@@ -27,7 +27,8 @@ nmap { {zz
 nnoremap <silent> <C-_> :nohlsearch<Bar>:echo<CR>
 
 " Show undo history.
-nmap <silent> <leader>u :GundoToggle<CR>
+nmap <silent> <leader>u :UndotreeToggle<CR>
+
 
 " Open Nerd Tree.
 map <leader>n :NERDTreeToggle<CR>
@@ -44,9 +45,19 @@ nnoremap <silent> <M-p> :TmuxNavigatePrevious<cr>
 let g:tmux_navigator_save_on_switch = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" let g:UltiSnipsExpandTrigger="<c-e>"
+" let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Add new snippets on the fly.
 nnoremap <leader>s :UltiSnipsEdit<cr>
@@ -69,11 +80,15 @@ endif
 nnoremap <leader>hol :call ToggleOverLength()<CR>
 
 " CommandT like fuzzy file finder
-let $FZF_DEFAULT_COMMAND='pt -g ""'
-let $FZF_CTRL_T_COMMAND='pt -g ""'
+command! -bang -nargs=? -complete=dir AllFiles
+    \ call fzf#vim#files(<q-args>, {'source': 'rg --files --hidden --follow --no-ignore'}, <bang>0)
 nnoremap <leader>t :FZF<cr>
+nnoremap <leader>T :AllFiles<cr>
+nnoremap <leader>f :Lines<cr>
+nnoremap <leader>F :Rg<cr>
 
 " Open file from the current path.
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 map ,x :split <C-R>=expand("%:p:h") . "/" <CR>
+

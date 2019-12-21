@@ -1,12 +1,5 @@
-" ██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
-" ██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
-" ██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
-" ██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
-" ██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
-" ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
-"
 " Author:  Benjamin Rau
-" License: WTFPL
+" License: MIT
 
 "" Config files are located in config folder and sorted thematically.
 "" Not using the plugin folder in order to reload them when I want to.
@@ -35,6 +28,9 @@ runtime config/keymap.vim
 
 " Load the fun stuff.
 runtime config/coding.vim
+
+" Load file type detection.
+runtime config/filetypes.vim
 
 " Load the personal definitions and changes.
 runtime config/functions.vim

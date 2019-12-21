@@ -1,11 +1,4 @@
-" ██╗   ██╗██╗███╗   ███╗
-" ██║   ██║██║████╗ ████║
-" ██║   ██║██║██╔████╔██║
-" ╚██╗ ██╔╝██║██║╚██╔╝██║
-"  ╚████╔╝ ██║██║ ╚═╝ ██║
-"   ╚═══╝  ╚═╝╚═╝     ╚═╝
-"
 " Author:  Benjamin Rau
-" License: WTFPL
+" License: MIT
 
 "" Make things function the way you want them to.

@@ -1,5 +1,19 @@
 ## Config files for github.
 
 [user]
+	email = benjamin.rau@thingos.io
+	name = Benjamin Rau
 [push]
 	default = simple
+[alias]
+	ls = log --pretty=oneline --abbrev
+
+[merge]
+	tool = nvim
+[mergetool "nvim"]
+	cmd = nvim -f -c "Gdiff" "$MERGED"
+
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -f -c "Gdiff" "$MERGED"
