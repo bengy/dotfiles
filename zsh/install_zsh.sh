@@ -23,3 +23,5 @@ create_link $DOTFILE_DIR/zsh/zshenv $HOME/.zshenv
 # them in this folder.
 create_link $DOTFILE_DIR/zsh/zlogin $DOTFILE_DIR/zsh/.zlogin
 create_link $DOTFILE_DIR/zsh/zshrc $DOTFILE_DIR/zsh/.zshrc
+
+create_link $DOTFILE_DIR/zsh/.powerlevel10k/powerlevel10k.zsh-theme $DOTFILE_DIR/zsh/.zim/modules/prompt/functions/prompt_powerlevel10k_setup
