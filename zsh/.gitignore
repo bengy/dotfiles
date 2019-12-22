@@ -4,5 +4,3 @@
 .zlogin
 .zshrc
 zshrc_scripts/personal.zsh
-zsh/oh-my-zsh/*
-zsh/oh-my-zsh
