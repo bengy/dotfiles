@@ -23,7 +23,7 @@ zmodules=(directory environment git git-info history input custom \
 #
 
 # Set your desired prompt here
-POWERLEVEL10K_INSTALLATION_PATH=${ZIM_HOME}/modules/prompt/external-themes/powerlevel10k/powerlevel10k.zsh-theme
+POWERLEVEL10K_INSTALLATION_PATH=${ZIM_HOME}/../powerlevel10k/powerlevel10k.zsh-theme
 POWERLEVEL10K_VI_INSERT_MODE_STRING="I"
 POWERLEVEL10K_VI_COMMAND_MODE_STRING="N"
 POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(context dir vcs vi_mode)
