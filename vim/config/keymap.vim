@@ -10,12 +10,11 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Quickly edit the vimrc file.
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>ce :e $MYVIMRC<CR>
 let g:config_path = expand('<sfile>:p')
-nmap <silent> <leader>evc :execute 'edit' g:config_path<CR>
+nmap <silent> <leader>cev :execute 'edit' g:config_path<CR>
 " Live reload the vimrc file.
-nmap <silent> <leader>rv :so $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>cr :so $MYVIMRC<CR>
 
 " Auto center after moving around.
 nmap n nzz
@@ -58,6 +57,8 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+xmap <leader>r  <Plug>(coc-codeaction-selected)
+nmap <leader>r  <Plug>(coc-codeaction-selected)
 
 " Add new snippets on the fly.
 nnoremap <leader>s :UltiSnipsEdit<cr>
@@ -88,7 +89,42 @@ nnoremap <leader>f :Lines<cr>
 nnoremap <leader>F :Rg<cr>
 
 " Open file from the current path.
-map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
-map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
-map ,x :split <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>v :vs <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>x :split <C-R>=expand("%:p:h") . "/" <CR>
 
+function! NERDTreeMapOpenSplit(node)
+  call a:node.open({'where': 'h'})
+endfunction
+autocmd VimEnter * call NERDTreeAddKeyMap({
+  \ 'key': 'x',
+  \ 'callback': 'NERDTreeMapOpenSplit',
+  \ 'quickhelpText': 'open horizontal split',
+  \ 'scope': 'FileNode' })
+
+function! NERDTreeMapPreviewSplit(node)
+  call a:node.open({'where': 'h', 'stay': 1})
+endfunction
+autocmd VimEnter * call NERDTreeAddKeyMap({
+  \ 'key': 'gx',
+  \ 'callback': 'NERDTreeMapPreviewSplit',
+  \ 'quickhelpText': 'preview horizontal split',
+  \ 'scope': 'FileNode' })
+
+function! NERDTreeMapOpenVSplit(node)
+  call a:node.open({'where': 'v'})
+endfunction
+autocmd VimEnter * call NERDTreeAddKeyMap({
+  \ 'key': 'v',
+  \ 'callback': 'NERDTreeMapOpenVSplit',
+  \ 'quickhelpText': 'open vertical split',
+  \ 'scope': 'FileNode' })
+
+function! NERDTreeMapPreviewVSplit(node)
+  call a:node.open({'where': 'v', 'stay': 1})
+endfunction
+autocmd VimEnter * call NERDTreeAddKeyMap({
+  \ 'key': 'gv',
+  \ 'callback': 'NERDTreeMapPreviewVSplit',
+  \ 'quickhelpText': 'preview vertical split',
+  \ 'scope': 'FileNode' })

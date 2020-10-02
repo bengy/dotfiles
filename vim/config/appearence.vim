@@ -3,18 +3,26 @@
 
 "" Make your text editor look fancier than you do.
 
+" True color support if available.
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 " Use color syntax highlighting.
 syntax enable
 
 " Choose between dark/light theme (if theme supports it).
 set background=dark
 " Enable the solarized theme.
-colorscheme solarized
+colorscheme solarized8
 " Customize the airline statusline.
 " Automatically populate patched fonts to have good looking status bar.
 let g:airline_powerline_fonts = 1
 " Set the theme to match our color theme.
 let g:airline_theme='solarized'
+
 
 
 " Highlight red if a line goes beyond the 80 characters.
@@ -69,7 +77,7 @@ set formatoptions=c,q,r,t
 " Show tabs and trailing whitespaces.
 set list listchars=tab:→\ ,trail:·
 " Define how they should look like (gray with no special background).
-:hi SpecialKey ctermbg=8 ctermfg=59 cterm=NONE
+" :hi SpecialKey ctermbg=8 ctermfg=59 cterm=NONE
 
 " Start NERDTree if vim starts up with no specified files.
 autocmd StdinReadPre * let s:std_in=1

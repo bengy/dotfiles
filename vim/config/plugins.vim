@@ -1,11 +1,11 @@
 
 " License: MIT
 
-"" Using vim-plug to manage plugins.
+" Using vim-plug to manage plugins.
 call plug#begin(g:editor_root . '/plugins')
 
 " Solarized theming.
-Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 
 " Beautiful status bar (powerline style).
 Plug 'vim-airline/vim-airline'
@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " NERD Tree as a file drawer (move and delete files, look at dirs).
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 " Syntax highlight (filetype)
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Fancy icons.
@@ -22,7 +22,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tsony-tsonev/nerdtree-git-plugin'
 
+" Orgmode support.
+Plug 'jceb/vim-orgmode'
 
+" Add repeat actions for plugins.
+Plug 'tpope/vim-repeat'
 
 " Nice undo history.
 Plug 'mbbill/undotree'
@@ -75,6 +79,7 @@ Plug 'tpope/vim-surround'
 " One syntax definition monster that fullfills my needs.
 Plug 'sheerun/vim-polyglot'
 Plug 'jez/vim-ispc'
+Plug 'sirtaj/vim-openscad'
 
 " File templates
 Plug 'aperezdc/vim-template'

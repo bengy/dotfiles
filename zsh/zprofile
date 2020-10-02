@@ -3,3 +3,5 @@ export XKB_DEFAULT_VARIANT=altgr-intl
 export XKB_DEFAULT_OPTIONS=caps:escape
 
 PATH="$HOME/.yarn/bin:$PATH"
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+

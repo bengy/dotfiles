@@ -7,28 +7,42 @@
 #
 # Zim settings
 #
-
-# Select what modules you would like enabled.
-# The second line of modules may depend on options set by modules in the first
-# line. These dependencies are noted on the respective module's README.md.
-zmodules=(directory environment git git-info history input custom \
-          prompt completion syntax-highlighting history-substring-search )
-
-###################
-# MODULE SETTINGS #
-###################
+# Sets sane Zsh built-in environment options.
+zmodule environment
+# Provides handy git aliases and functions.
+zmodule git
+# Applies correct bindkeys for input events.
+zmodule input
+# Sets a custom terminal title.
+zmodule termtitle
+# Utility aliases and functions. Adds colour to ls, grep and less.
+zmodule utility
 
 #
 # Prompt
 #
+# Exposes git repository status information to prompts.
+zmodule git-info
+zmodule romkatv/powerlevel10k
 
-# Set your desired prompt here
-POWERLEVEL10K_INSTALLATION_PATH=${ZIM_HOME}/../powerlevel10k/powerlevel10k.zsh-theme
-POWERLEVEL10K_VI_INSERT_MODE_STRING="I"
-POWERLEVEL10K_VI_COMMAND_MODE_STRING="N"
-POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(context dir vcs vi_mode)
-POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-zprompt_theme='powerlevel10k'
+# Additional completion definitions for Zsh.
+zmodule zsh-users/zsh-completions
+# Enables and configures smart and extensive tab completion.
+# completion must be sourced after zsh-users/zsh-completions
+zmodule completion
+# Fish-like autosuggestions for Zsh.
+zmodule zsh-users/zsh-autosuggestions
+# Fish-like syntax highlighting for Zsh.
+# zsh-users/zsh-syntax-highlighting must be sourced after completion
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule history
+# Fish-like history search (up arrow) for Zsh.
+# zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+
+###################
+# MODULE SETTINGS #
+###################
 
 #
 # Completion
