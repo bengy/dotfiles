@@ -59,6 +59,8 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <leader>r  <Plug>(coc-codeaction-selected)
 nmap <leader>r  <Plug>(coc-codeaction-selected)
+nmap gen  <Plug>(coc-diagnostic-next-error)
+nmap gep  <Plug>(coc-diagnostic-prev-error)
 
 " Add new snippets on the fly.
 nnoremap <leader>s :UltiSnipsEdit<cr>
@@ -82,8 +84,11 @@ nnoremap <leader>hol :call ToggleOverLength()<CR>
 
 " CommandT like fuzzy file finder
 command! -bang -nargs=? -complete=dir AllFiles
-    \ call fzf#vim#files(<q-args>, {'source': 'rg --files --hidden --follow --no-ignore'}, <bang>0)
+    \ call fzf#vim#files(<q-args>, {'source': 'rg --files --follow'}, <bang>0)
 nnoremap <leader>t :FZF<cr>
+nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>gs :GFiles?<cr>
+nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>T :AllFiles<cr>
 nnoremap <leader>f :Lines<cr>
 nnoremap <leader>F :Rg<cr>
