@@ -3,9 +3,13 @@
 #
 # Author:  Benjamin Rau
 # License: MIT
+#
+
 
 # Startx when loging in on first vt.
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec sway --unsupported-gpu
 
 # Initialize zim
 [[ -s ${ZIM_HOME}/login_init.zsh ]] && source ${ZIM_HOME}/login_init.zsh
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

@@ -41,6 +41,9 @@ Plug 'Lokaltog/vim-easymotion'
 " time.' - The humble tpope.
 Plug 'tpope/vim-fugitive'
 
+" tpope at it again with a better replace
+Plug 'tpope/vim-abolish'
+
 " Awsome snippets, who types nowadays anyways :D (said the vim user).
 " Snippets separated from engine. Here are some.
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -63,6 +66,14 @@ Plug 'epilande/vim-react-snippets'
 " Autoformatting. Uses native formatters.
 " Plug 'Chiel92/vim-autoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
+
+" Markdown support.
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" JS documentation.
+Plug 'yaegassy/coc-jsdoc', {'do': 'yarn install --frozen-lockfile'}
+
 
 
 " Fuzy finder.
@@ -70,6 +81,7 @@ Plug 'junegunn/fzf.vim'
 
 " Tmux navigation (between switching splits inside vim and inside tmux).
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/vimux'
 
 " Change the surroundings.
 Plug 'tpope/vim-surround'
@@ -86,6 +98,8 @@ Plug 'aperezdc/vim-template'
 
 " Local vimrc files for project specific settings.
 Plug 'embear/vim-localvimrc'
+
+Plug 'mtth/scratch.vim'
 
 " Browser vim.
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }

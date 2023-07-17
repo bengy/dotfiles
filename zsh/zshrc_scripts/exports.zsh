@@ -20,3 +20,9 @@ export SYSTEMD_EDITOR=$EDITOR
 # Set the editor for the sudoer file.
 export SUDO_EDITOR=$EDITOR
 export DEFAULT_USER=benjamin
+
+export FZF_DEFAULT_COMMAND='command fd -H -E .git -tf'
+export FZF_ALT_C_COMMAND='command fd -H -E .git -td'
+export FZF_CTRL_T_OPTS="--preview 'command bat --color=always --line-range :500 {}' ${FZF_CTRL_T_OPTS}"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export PATH=$PATH:/home/benjamin/.tooling/maestro/bin

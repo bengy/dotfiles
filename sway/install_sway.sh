@@ -6,3 +6,4 @@
 
 # Link the xinitrc file to the home directory.
 create_link $DOTFILE_DIR/sway/config $HOME/.config/sway/config
+create_link $DOTFILE_DIR/sway/waybar $HOME/.config/waybar/config

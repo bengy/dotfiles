@@ -1,8 +1,12 @@
 # Author:  Benjamin
 # License: MIT
 
+zmodload zsh/zprof
 # Set the directory for the scripts to use.
 DIR=$ZDOTDIR/zshrc_scripts
 
 # Load the config files.
 for zshconfig ($DIR/*.zsh) source $zshconfig
+# Add direnv
+eval "$(direnv hook zsh)"
+zprof

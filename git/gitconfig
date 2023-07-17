@@ -3,19 +3,35 @@
 [user]
 	email = benjamin.rau@thingos.io
 	name = Benjamin Rau
+	signingkey = E2802F077C4322E5
 [push]
-	default = simple
+	default = current
 [alias]
 	ls = log --pretty=oneline --abbrev
+	wt = "!f() { git worktree add -b benjamin/$1 ${PWD}-$1 $(git symbolic-ref --short HEAD); cd ${PWD}-$1; }; f"
+	wl = "!f() { git worktree list | fzf --height 40% --reverse; }; f"
 
 [merge]
 	tool = nvim
 [mergetool "nvim"]
 	cmd = nvim -f -c "Gdiff" "$MERGED"
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
 
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -f -c "Gdiff" "$MERGED"
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
 [pull]
-	rebase = false
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[submodule]
+	recurse = true

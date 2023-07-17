@@ -75,3 +75,21 @@ function extract {
   fi
 fi
 }
+
+function tmpcd () {
+  cd "$(mktemp -d)"
+  if [[ $# -eq -1 ]]; then
+    \mkdir -p "$1"
+    cd "$1"
+  fi
+}
+
+function swap()
+{
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE && mv "$2" "$1" && mv $TMPFILE "$2"
+}
+
+function wadb() {
+  adb connect pixelated.local:$(nmap -sT pixelated.local -p30000-49999 | awk -F/ '/tcp open/{print $1}')
+}

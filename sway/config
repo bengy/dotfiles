@@ -8,10 +8,9 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term urxvt
+set $term alacritty
 # Your preferred application launcher
-set $menu dmenu_run
+set $menu ulauncher
 
 ### Key bindings
 #
@@ -32,9 +31,6 @@ set $menu dmenu_run
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
-
-    # reload the configuration file
-    bindsym $mod+Shift+c reload
 
     # exit sway (logs you out of your wayland session)
     bindsym $mod+Shift+e exit
@@ -89,14 +85,18 @@ set $menu dmenu_run
     bindsym $mod+Shift+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    bindsym $mod+Control+Shift+Right move workspace to output right
+    bindsym $mod+Control+Shift+Left move workspace to output left
+    bindsym $mod+Control+Shift+Down move workspace to output down
+    bindsym $mod+Control+Shift+Up move workspace to output up
 #
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+x splitv
+    bindsym $mod+v splith
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
@@ -150,13 +150,13 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Reload the configuration file.
-bindsym $mod+Shift+c reload
 # Restart sway inplace (preserves your layout/session, can be used to upgrade i3).
 bindsym $mod+Shift+r restart
 
 # Start chromium with fast shortcut.
-bindsym $mod+c exec "chromium"
+bindsym $mod+c exec "google-chrome-unstable"
+bindsym $mod+Shift+c exec "google-chrome-unstable --incognito"
+
 
 #
 # Special keys:
@@ -169,12 +169,12 @@ bindsym $mod+c exec "chromium"
 	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks | awk '/* index:/{print $3}') +5%
 	bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks | awk '/* index:/{print $3}') -5%
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available).
 bar {
-        status_command i3status
-        tray_output primary
+        swaybar_command waybar
 }
 
-exec xrdb $HOME/.Xresources
-exec urxvtd -q -f -o
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    tap enabled
+}
+
+exec mako --default-timeout 5000 &
